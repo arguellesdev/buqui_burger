@@ -1,10 +1,12 @@
 # session_2
 
-A new Flutter project.
+A new Flutter project from an Entry Level Student.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter application. the contents include basic widgets such Scaffold, App Bar and others.
+ The main point of this repository is practice the fundamentals in code instead of only watch videos without implementing. practice the fundamentals.
+
 
 A few resources to get you started if this is your first Flutter project:
 

@@ -26,13 +26,14 @@ class _MyHomePageState extends State<MyHomePage> {
           foregroundColor: Colors.black38,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          flexibleSpace: const ContainerTheme()),
+          flexibleSpace: const ContainerTheme(),
+      ),
       drawer: const MyDrawer(),
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [my_widgets.SearchBar()],
       ),
-    );
+      );
   }
 }

@@ -5,18 +5,20 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-      Container(
+    return Container(
       width: MediaQuery.of(context).size.width,
-
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(37),
           bottomRight: Radius.circular(37),
         ),
+          gradient: LinearGradient(
+            colors: [Color(0xFFF9881F), Color(0xFFFF774C)],
+            stops: [0.2, 0.6],
+            ),
       ),
       padding: const EdgeInsets.all(12),
-      alignment: Alignment.bottomCenterCenter,
+      alignment: Alignment.topCenter,
       child: const Expanded(
         child: TextField(
           textAlignVertical: TextAlignVertical.center,
