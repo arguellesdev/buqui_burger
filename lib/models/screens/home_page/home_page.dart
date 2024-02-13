@@ -1,6 +1,5 @@
-import 'package:buqui_burgers/models/common_widgets/container_theme.dart';
-import 'package:buqui_burgers/models/common_widgets/my_themes.dart';
-import 'package:buqui_burgers/models/common_widgets/side_menu_drawer.dart';
+import 'package:buqui_burgers/models/common_widgets/hp_menu_drawer.dart';
+import 'package:buqui_burgers/models/screens/home_page/myappbar_hp.dart';
 import "package:flutter/material.dart";
 import 'my_search_bar.dart';
 
@@ -18,31 +17,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF7F7FB),
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.black38,
-        ),
-        title: const Text('Buqui Burgers',
-            style: TextStyle(
-              color: Colors.black54,
-              fontWeight: FontWeight.bold,
-              wordSpacing: 12,
-              letterSpacing: 9,
-            ),
-        ),
-        foregroundColor: Colors.black38,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        flexibleSpace: const ContainerTheme(),
-      ),
-      drawer: const MyDrawer(),
+      appBar: const MyAppBar(),
+      drawer: MyDrawer(drawerItems: [
+        DrawerItem(title: 'Menu', onTap: () {}),
+        DrawerItem(title: 'TapRoom', onTap: () {}),
+        DrawerItem(title: 'Contact', onTap: () {})
+      ]),
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
-        // children: [my_widgets.SearchBar()],
         children: [
           MySearchBar(
-            hintText: 'What do you want to eat today?',
+            hintText: 'What do you want today buqui?',
             // onSearch: (String value) {},
           )
         ],
