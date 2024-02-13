@@ -24,16 +24,29 @@ class _MyHomePageState extends State<MyHomePage> {
         DrawerItem(title: 'TapRoom', onTap: () {}),
         DrawerItem(title: 'Contact', onTap: () {})
       ]),
-      body: const Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          MySearchBar(
-            hintText: 'What do you want today buqui?',
-            // onSearch: (String value) {},
-          ),
-          AboutUs(),
-        ],
+      body: const SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            MySearchBar(
+              hintText: 'What do you want today buqui?',
+              // onSearch: (String value) {},
+            ),
+            AboutUs(),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black26,
+        foregroundColor: Colors.orangeAccent,
+        splashColor: Colors.orangeAccent.withOpacity(0.28),
+        shape: const CircleBorder(),
+        onPressed: () {},
+        child: const Icon(
+          Icons.chat_bubble_rounded,
+          semanticLabel: 'Chat with us',
+        ),
       ),
     );
   }
