@@ -1,4 +1,5 @@
 import 'package:buqui_burgers/models/common_widgets/hp_menu_drawer.dart';
+import 'package:buqui_burgers/models/screens/home_page/about_us.dart';
 import 'package:buqui_burgers/models/screens/home_page/myappbar_hp.dart';
 import "package:flutter/material.dart";
 import 'my_search_bar.dart';
@@ -30,7 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
           MySearchBar(
             hintText: 'What do you want today buqui?',
             // onSearch: (String value) {},
-          )
+          ),
+          AboutUs(),
         ],
       ),
     );
