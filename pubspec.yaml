@@ -1,6 +1,5 @@
 name: buqui_burgers
 description: Buqui Burgers
-publish_to: Codigo Facilito # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
