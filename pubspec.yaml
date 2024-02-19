@@ -34,7 +34,7 @@ dev_dependencies:
 flutter_icons:
   # Custom app icon. For more info see: https://pub.dev/packages/flutter_launcher_icons
   ios: true
-  android: true
+  android: false
 
 flutter:
   uses-material-design: true

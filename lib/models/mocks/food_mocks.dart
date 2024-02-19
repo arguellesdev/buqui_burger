@@ -1,11 +1,11 @@
 const foodJson =
-    "{\"food_name\": \"Sonora bichi\",\"foodInfo\": \"Steak\",\"burgerType\": \"carnivore diet\",\"foodImage\": \"https://img.freepik.com/free-photo/meat-cheeseburger-with-bacon-french-fries_140725-4811.jpg?w=1060&t=st=1707331765~exp=1707332365~hmac=03346927cd597ed69e0f14773ca0f2d0fa3dfe9b572d1db6119fbef2b0faafd9\"}";
+    "{\"food_name\": \"Sonora bichi\",\"foodInfo\": \"Steak\",\"burgerType\": \"All-Meat Diet\",\"foodImage\": \"https://img.freepik.com/free-photo/meat-cheeseburger-with-bacon-french-fries_140725-4811.jpg?w=1060&t=st=1707331765~exp=1707332365~hmac=03346927cd597ed69e0f14773ca0f2d0fa3dfe9b572d1db6119fbef2b0faafd9\"}";
 
 const foodsJson = [
   {
     "food_name": "Sonora bichi",
     "foodInfo": "Steak,",
-    "burgerType": "carnivore diet",
+    "burgerType": "All-Meat Diet",
     "foodImage":
         "https://img.freepik.com/free-photo/meat-cheeseburger-with-bacon-french-fries_140725-4811.jpg?w=1060&t=st=1707331765~exp=1707332365~hmac=03346927cd597ed69e0f14773ca0f2d0fa3dfe9b572d1db6119fbef2b0faafd9"
   },
