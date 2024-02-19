@@ -23,8 +23,9 @@ class _MyAppThemeState extends State<MyAppTheme> {
           elevation: 1,
         ),
       ),
-      home: const MyHomePage(title: 'Buqui Mahaka',),
+      home: const MyHomePage(title: 'Buqui Burgers',),
     );
   }
+
 }
 
