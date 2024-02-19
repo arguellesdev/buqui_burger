@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'food_menu.dart';
+import 'food.dart';
 
 class HomeFeatures extends StatefulWidget {
   final Food food;

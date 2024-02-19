@@ -1,7 +1,12 @@
+import 'dart:convert';
+
 import 'package:buqui_burgers/models/common_widgets/hp_menu_drawer.dart';
+import 'package:buqui_burgers/models/features/food.dart';
+import 'package:buqui_burgers/models/mocks/food_mocks.dart';
 import 'package:buqui_burgers/models/screens/home_page/about_us.dart';
 import 'package:buqui_burgers/models/screens/home_page/myappbar_hp.dart';
 import "package:flutter/material.dart";
+
 import 'my_search_bar.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -20,7 +25,14 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: const Color(0xFFF7F7FB),
       appBar: const MyAppBar(),
       drawer: MyDrawer(drawerItems: [
-        DrawerItem(title: 'Menu', onTap: () {}),
+        DrawerItem(
+          title: 'Menu',
+          onTap: () {
+            final hamburger =
+                Food.fromJson(jsonDecode(foodJson) as Map<String, dynamic>);
+            print(hamburger.burgerType);
+          },
+        ),
         DrawerItem(title: 'TapRoom', onTap: () {}),
         DrawerItem(title: 'Contact', onTap: () {})
       ]),
