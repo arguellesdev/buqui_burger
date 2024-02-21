@@ -16,7 +16,7 @@ class _HomeFeaturesState extends State<HomeFeatures> {
       body: Stack(
         children: [
           Image.network(
-            widget.food.foodImage!,
+            widget.food.foodImage,
             height: 300,
             width: double.infinity,
             fit: BoxFit.cover,
