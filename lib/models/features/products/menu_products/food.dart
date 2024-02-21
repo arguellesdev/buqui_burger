@@ -10,15 +10,20 @@ class Food {
   final String? foodInfo;
 
   const Food({
-    this.foodImage,
-    this.foodInfo,
     this.foodName,
+    this.foodInfo,
     this.burgerType,
+    this.foodImage,
   });
 
-  factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);
-
-  Map<String, dynamic> toJson() => _$FoodToJson(this);
+  factory Food.fromJson(Map<String, dynamic> json) {
+    return Food(
+      foodName: json['food_name'] ?? '',
+      foodInfo: json['foodInfo'] ?? '',
+      burgerType: json['burgerType'] ?? '',
+      foodImage: json['foodImage'] ?? '',
+    );
+  }
 }
 
 
