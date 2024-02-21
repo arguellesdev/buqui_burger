@@ -4,26 +4,21 @@ part 'food.g.dart';
 @JsonSerializable()
 class Food {
   @JsonKey(name:'food_name')
-  final String? foodName;
-  final String? burgerType;
-  final String? foodImage;
-  final String? foodInfo;
+  final String foodName;
+  final String burgerType;
+  final String foodImage;
+  final String foodInfo;
 
   const Food({
-    this.foodName,
-    this.foodInfo,
-    this.burgerType,
-    this.foodImage,
+    required this.foodName,
+    required this.foodInfo,
+    required this.burgerType,
+    required this.foodImage,
   });
 
-  factory Food.fromJson(Map<String, dynamic> json) {
-    return Food(
-      foodName: json['food_name'] ?? '',
-      foodInfo: json['foodInfo'] ?? '',
-      burgerType: json['burgerType'] ?? '',
-      foodImage: json['foodImage'] ?? '',
-    );
-  }
+  factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FoodToJson(this);
 }
 
 

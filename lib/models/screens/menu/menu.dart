@@ -12,20 +12,15 @@ class MyMenu extends StatefulWidget {
 }
 
 class _MyMenuState extends State<MyMenu> {
-  List<Food> foods = [];
+  late final List<Food> foods;
 
   @override
   void initState() {
     super.initState();
-    loadFoods();
+    var foodProvider = FoodProvider();
+    foods = foodProvider.getFoods();
   }
 
-  void loadFoods() {
-    // Parse JSON data and populate foods list
-    for (var foodJson in foodsJson) {
-      foods.add(Food.fromJson(foodJson));
-    }
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,27 +30,16 @@ class _MyMenuState extends State<MyMenu> {
       ),
       // endDrawer: ,
       body: ListView.builder(
-    itemCount: foods.length,
+        itemCount: foods.length,
         itemBuilder: (BuildContext context, int index) {
-      return ListTile(
-        leading: Image.network(foods[3].foodImage ?? ''),
-        title: Text(foods[0].foodName ?? ''),
-        subtitle: Text(foods[1].foodInfo ?? ''),
-        trailing: Text(foods[2].burgerType ?? ''),
+          return ListTile(
+            leading: Image.network(foods[index].foodImage),
+            title: Text(foods[index].foodName),
+            subtitle: Text(foods[index].foodInfo),
+            trailing: Text(foods[index].burgerType),
           );
         },
       ),
-      floatingActionButton:
-      FloatingActionButton(
-        onPressed: _navigateToMenuScreen,
-        child: const Icon(Icons.fork_left_rounded),
-      ),
-    );
-  }
-  void _navigateToMenuScreen() async {
-    var foodProvider = FoodProvider();
-    foodProvider.getFoods();
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> const MyMenu())
     );
   }
 }

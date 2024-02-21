@@ -25,11 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: MyDrawer(drawerItems: [
         DrawerItem(
           title: 'Menu',
-          onTap: () {
-            var foodProvider = FoodProvider();
-            foodProvider.getFoods();
-            const MyMenu();
-          },
+          onTap: _navigateToMenuScreen,
         ),
         DrawerItem(title: 'TapRoom', onTap: () {}),
         DrawerItem(title: 'Contact', onTap: () {})
@@ -57,6 +53,17 @@ class _MyHomePageState extends State<MyHomePage> {
           Icons.chat_bubble_rounded,
           semanticLabel: 'Chat with us',
         ),
+      ),
+    );
+  }
+
+  void _navigateToMenuScreen() {
+    var foodProvider = FoodProvider();
+    foodProvider.getFoods();
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const MyMenu(),
       ),
     );
   }
