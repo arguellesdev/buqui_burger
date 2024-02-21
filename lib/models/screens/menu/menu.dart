@@ -27,21 +27,50 @@ class _MyMenuState extends State<MyMenu> {
         titleSpacing: 1.2,
       ),
       // endDrawer: ,
-      body: ListView.builder(
+      body: PageView.builder(
         itemCount: foods.length,
         itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            leading: SizedBox(
-                height: 200,
-                width: double.infinity,
-                child: Image.network(
-                  foods[index].foodImage,
-                  fit: BoxFit.cover,
-                ),
+          return Center(
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Image.network(
+                      foods[index].foodImage,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          foods[index].foodName,
+                          style: const TextStyle(
+                              fontSize: 27.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          foods[index].burgerType,
+                          style: const TextStyle(
+                              fontSize: 19.0),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          foods[index].foodInfo,
+                          style: const TextStyle(
+                              fontSize: 17.0),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
-            title: Text(foods[index].foodName),
-            subtitle: Text(foods[index].foodInfo),
-            trailing: Text(foods[index].burgerType),
           );
         },
       ),
