@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import '../../features/products/menu_products/food.dart';
 import '../../features/products/menu_products/food_provider.dart';
@@ -23,8 +25,15 @@ class _MyMenuState extends State<MyMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('The Buqui Bichi Experience'),
+        backgroundColor: Colors.amber.withOpacity(0.72),
+        foregroundColor: Colors.brown,
+        title: const Text('The Buqui Bichi Menu'),
         titleSpacing: 1.2,
+        titleTextStyle: const TextStyle(
+            fontSize:18 ,
+        fontWeight: FontWeight.bold,
+        overflow: TextOverflow.fade,
+        color: Colors.brown),
       ),
       // endDrawer: ,
       body: PageView.builder(
