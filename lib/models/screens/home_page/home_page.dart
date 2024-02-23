@@ -4,10 +4,8 @@ import 'package:buqui_burgers/models/features/products/menu_products/food_provid
 import 'package:buqui_burgers/models/screens/home_page/myappbar_hp.dart';
 import 'package:buqui_burgers/models/screens/menu/menu.dart';
 import "package:flutter/material.dart";
-import 'package:go_router/go_router.dart';
 import 'my_search_bar.dart';
 
-final router = GoRouter(routes: []);
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
