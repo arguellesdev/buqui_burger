@@ -10,7 +10,7 @@ class FoodProvider {
       foods.add(food);
     }
     for (var food in foods) {
-      debugPrint('food debug output = ${food.foodName} ${food.burgerType}');
+      debugPrint('food debug output = YOU MADE GO ROUTER WORK ANYA  ${food.foodName} ${food.burgerType}');
     }
     return foods;
   }
