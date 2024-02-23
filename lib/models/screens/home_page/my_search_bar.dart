@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 
 class MySearchBar extends StatelessWidget {
   final String hintText;
-  // final ValueChanged<String> onSearch;
 
   const MySearchBar({
     super.key,
     required this.hintText,
-    // required this.onSearch,
   });
 
   @override
@@ -39,7 +37,6 @@ class MySearchBar extends StatelessWidget {
             color: Colors.black26,
           ),
         ),
-        // onSubmitted: onSearch,
       ),
     );
   }
