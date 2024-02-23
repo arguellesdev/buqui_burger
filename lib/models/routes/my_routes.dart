@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:buqui_burgers/models/screens/home_page/home_page.dart';
+import 'package:buqui_burgers/models/screens/home_page/home_page_deprecated.dart';
 import 'package:buqui_burgers/models/screens/menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'dart:core';

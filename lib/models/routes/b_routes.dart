@@ -1,4 +1,4 @@
-import 'package:buqui_burgers/models/screens/home_page/home_page.dart';
+import 'package:buqui_burgers/models/screens/home_page/home_page1.dart';
 import 'package:buqui_burgers/models/screens/menu/menu.dart';
 import 'package:go_router/go_router.dart';
 
