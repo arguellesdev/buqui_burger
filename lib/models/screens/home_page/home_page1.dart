@@ -1,7 +1,6 @@
 import 'package:buqui_burgers/models/common_widgets/hp_menu_drawer.dart';
 import 'package:buqui_burgers/models/routes/b_routes.dart';
 import 'package:buqui_burgers/models/screens/home_page/about_us.dart';
-import 'package:buqui_burgers/models/features/products/menu_products/food_provider.dart';
 import 'package:buqui_burgers/models/screens/home_page/myappbar_hp.dart';
 import "package:flutter/material.dart";
 import 'my_search_bar.dart';
@@ -18,7 +17,7 @@ class MyHomePage extends StatelessWidget {
       drawer: MyDrawer(drawerItems: [
         DrawerItem(
           title: 'Menu',
-          onTap: _goToMenuScreen
+          onTap: _goToMenuScreen,
         ),
         DrawerItem(
           title: 'TapRoom',
@@ -53,8 +52,6 @@ class MyHomePage extends StatelessWidget {
     );
   }
   void _goToMenuScreen() {
-    var foodProvider = FoodProvider();
-    foodProvider.getFoods();
     router.go('/menu');
   }
 }

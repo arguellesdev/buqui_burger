@@ -5,12 +5,13 @@ import 'package:go_router/go_router.dart';
 final router = GoRouter(
   routes: [
     GoRoute(
-      path: '/',
-      builder: (context, state) => const MyHomePage(title: 'Buqui Burgers'),
-    ),
-    GoRoute(
-        path: '/menu',
-        builder: (context, state) => const MyMenu(),
-    ),
+        path: '/',
+        builder: (context, state) => const MyHomePage(title: 'Buqui Burgers'),
+        routes: [
+          GoRoute(
+            path: 'menu',
+            builder: (context, state) => const MyMenu(),
+          ),
+        ]),
   ],
 );
