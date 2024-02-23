@@ -1,4 +1,4 @@
-import 'package:buqui_burgers/models/features/products/menu_products/food.dart';
+import 'package:buqui_burgers/src/features/products/menu_products/food.dart';
 import 'package:flutter/material.dart';
 import '../../../mocks/food_mocks.dart';
 

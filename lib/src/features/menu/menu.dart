@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../features/products/menu_products/food.dart';
-import '../../features/products/menu_products/food_provider.dart';
+import '../products/menu_products/food.dart';
+import '../products/menu_products/food_provider.dart';
 
 class MyMenu extends StatefulWidget {
   const MyMenu({super.key});

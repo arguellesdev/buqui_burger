@@ -1,8 +1,8 @@
-import 'package:buqui_burgers/models/routes/b_routes.dart';
+import 'package:buqui_burgers/src/routes/b_routes.dart';
 import 'package:flutter/material.dart';
 
-class MyAppTheme extends StatelessWidget {
-  const MyAppTheme({super.key});
+class MyThemedApp extends StatelessWidget {
+  const MyThemedApp({super.key});
 
   @override
   Widget build(BuildContext context) {

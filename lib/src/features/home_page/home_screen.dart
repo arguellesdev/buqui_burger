@@ -1,7 +1,7 @@
-import 'package:buqui_burgers/models/common_widgets/hp_menu_drawer.dart';
-import 'package:buqui_burgers/models/routes/b_routes.dart';
-import 'package:buqui_burgers/models/screens/home_page/about_us.dart';
-import 'package:buqui_burgers/models/screens/home_page/myappbar_hp.dart';
+import 'package:buqui_burgers/src/common_widgets/hp_menu_drawer.dart';
+import 'package:buqui_burgers/src/routes/b_routes.dart';
+import 'package:buqui_burgers/src/features/home_page/about_us.dart';
+import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
 import "package:flutter/material.dart";
 import 'my_search_bar.dart';
 
