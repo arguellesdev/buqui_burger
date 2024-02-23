@@ -1,5 +1,4 @@
-
-import 'package:buqui_burgers/models/screens/home_page/home_page.dart';
+import 'package:buqui_burgers/models/routes/my_routes.dart';
 import 'package:flutter/material.dart';
 
 class MyAppTheme extends StatefulWidget {
@@ -10,9 +9,19 @@ class MyAppTheme extends StatefulWidget {
 }
 
 class _MyAppThemeState extends State<MyAppTheme> {
+  late MyRoutesDelegate<Object> _routerDelegate;
+  final MyRoutesParser<Object> _routeInformationParser = MyRoutesParser<Object>();
+
+
+  @override
+  void initState(){
+    super.initState();
+    _routerDelegate = MyRoutesDelegate();
+
+  }
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: const Color(0xFFDFE2E5),
@@ -23,7 +32,8 @@ class _MyAppThemeState extends State<MyAppTheme> {
           elevation: 1,
         ),
       ),
-      home: const MyHomePage(title: 'Buqui Burgers',),
+      routerDelegate: _routerDelegate,
+      routeInformationParser: _routeInformationParser,
     );
   }
 
