@@ -45,7 +45,7 @@ class MyHomePage extends StatelessWidget {
         shape: const CircleBorder(),
         onPressed: () {},
         child: const Icon(
-          Icons.chat_bubble_rounded,
+          Icons.question_mark_rounded,
           semanticLabel: 'Chat with us',
         ),
       ),
