@@ -46,7 +46,12 @@ class BuquiBurgers extends StatelessWidget {
               ),
                 onPressed: () {},
                 icon: const Icon(Icons.call_end_rounded),
-                label: const Text('Call us'),
+                label: const Text('Call us',
+                  style: TextStyle(
+                      fontFamily:'DIN Alternate',
+                    letterSpacing: 2,
+                    wordSpacing: 4,
+                  ),),
               ),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
@@ -58,7 +63,12 @@ class BuquiBurgers extends StatelessWidget {
                 ),
                 onPressed: () {},
                 icon: const Icon(Icons.share_location),
-                label: const Text('Where the buquis are'),
+                label: const Text('Where the buquis are',
+                  style: TextStyle(
+                    fontFamily:'DIN Condensed',
+                    letterSpacing: 2,
+                ),
+                ),
               ),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
@@ -70,7 +80,12 @@ class BuquiBurgers extends StatelessWidget {
                 ),
                 onPressed: () {},
                 icon: const Icon(Icons.share),
-                label: const Text('Share to your buquis'),
+                label: const Text('Share to your buquis',
+                style: TextStyle(
+                  fontFamily:'DIN Condensed',
+                  letterSpacing: 2,
+                ),
+                ),
               ),
             ],
           ),

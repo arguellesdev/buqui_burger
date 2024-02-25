@@ -67,6 +67,7 @@ class _MyMenuState extends State<MyMenu> {
                           style: const TextStyle(
                             fontSize: 19.0,
                             color: Colors.black38,
+                            fontFamily: 'Spot mono',
                           ),
                         ),
                         const SizedBox(height: 12),
@@ -76,7 +77,7 @@ class _MyMenuState extends State<MyMenu> {
                           style: const TextStyle(
                             fontSize: 17.0,
                             color: Colors.black38,
-                            fontFamily: 'Raleway',
+                            fontFamily: 'Futura',
                             letterSpacing: 2,
                             wordSpacing: 5,
                           ),
@@ -100,6 +101,7 @@ class _MyMenuState extends State<MyMenu> {
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.brown,
+                            fontFamily: 'Notewhorty',
                           ),
                         ),
                         Icon(Icons.arrow_right, color: Colors.cyan),
