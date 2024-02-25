@@ -1,6 +1,6 @@
 import 'package:buqui_burgers/src/common_widgets/hp_menu_drawer.dart';
+import 'package:buqui_burgers/src/features/home_page/buqui_page.dart';
 import 'package:buqui_burgers/src/routes/b_routes.dart';
-import 'package:buqui_burgers/src/features/home_page/about_us.dart';
 import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
 import "package:flutter/material.dart";
 import 'my_search_bar.dart';
@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
               hintText: 'What do you want today buqui?',
               // onSearch: (String value) {},
             ),
-            AboutUs(),
+            BuquiBurgers(),
           ],
         ),
       ),
@@ -43,16 +43,21 @@ class MyHomePage extends StatelessWidget {
         foregroundColor: Colors.orangeAccent,
         splashColor: Colors.orangeAccent.withOpacity(0.28),
         shape: const CircleBorder(),
-        onPressed: () {},
+        onPressed: () {
+          _goToAboutUs();
+        },
         child: const Icon(
-          Icons.question_mark_rounded,
-          semanticLabel: 'Chat with us',
+          Icons.question_mark,
+          semanticLabel: 'About us',
         ),
       ),
     );
   }
   void _goToMenuScreen() {
     router.go('/menu');
+  }
+  void _goToAboutUs() {
+    router.go('/about');
   }
 }
 
