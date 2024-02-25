@@ -3,6 +3,7 @@ import '../../common_widgets/container_theme.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({super.key});
+
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -24,7 +25,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       foregroundColor: Colors.black38,
       backgroundColor: Colors.transparent,
       elevation: 0,
-      flexibleSpace: const ContainerTheme(),
+    flexibleSpace: const ContainerTheme(),
     );
   }
 }
