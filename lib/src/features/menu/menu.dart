@@ -25,7 +25,7 @@ class _MyMenuState extends State<MyMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber.withOpacity(0.72),
+        flexibleSpace: const ContainerTheme(),
         foregroundColor: Colors.brown,
         title: const Text('The Buqui Bichi Menu'),
         titleSpacing: 1.2,
