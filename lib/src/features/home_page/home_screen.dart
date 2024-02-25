@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.small(
         backgroundColor: Colors.black26,
         foregroundColor: Colors.orangeAccent,
         splashColor: Colors.orangeAccent.withOpacity(0.28),
