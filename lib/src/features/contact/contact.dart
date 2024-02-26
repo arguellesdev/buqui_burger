@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../common_widgets/container_theme.dart';
 
 class ContactBuqui extends StatelessWidget {
