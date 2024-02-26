@@ -1,5 +1,4 @@
 import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
-import 'package:buqui_burgers/src/common_widgets/my_themes.dart';
 import 'package:flutter/material.dart';
 
 class AboutUs extends StatelessWidget {

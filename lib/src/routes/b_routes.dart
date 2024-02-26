@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/features/contact/contact.dart';
 import 'package:buqui_burgers/src/features/home_page/about_us.dart';
 import 'package:buqui_burgers/src/features/home_page/home_screen.dart';
 import 'package:buqui_burgers/src/features/menu/menu.dart';
@@ -17,6 +18,9 @@ final router = GoRouter(
             path: 'about',
             builder: (context, state) => const AboutUs(),
           ),
+          GoRoute(path: 'contact',
+          builder: (context, state) => const ContactBuqui(),
+          )
         ]),
   ],
 );

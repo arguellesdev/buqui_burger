@@ -22,9 +22,11 @@ class MyHomePage extends StatelessWidget {
         ),
         DrawerItem(
           title: 'TapRoom',
-          onTap: () {},
+          onTap: (){},
         ),
-        DrawerItem(title: 'Contact', onTap: () {}
+        DrawerItem(
+          title: 'Contact',
+          onTap: _goToContact,
         ),
       ]),
       body: const SingleChildScrollView(
@@ -56,9 +58,15 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+
   void _goToMenuScreen() {
     router.go('/menu');
   }
+
+  void _goToContact() {
+    router.go('/contact');
+  }
+
   void _goToAboutUs() {
     router.go('/about');
   }
