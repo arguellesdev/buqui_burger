@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45782405987",
+    "project_id": "anya-7258c",
+    "storage_bucket": "anya-7258c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45782405987:android:6efcf670f6d2044a26f956",
+        "android_client_info": {
+          "package_name": "com.example.session_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsNAsJkgUVdo0C5oTH1mbW1f4CYo081e8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

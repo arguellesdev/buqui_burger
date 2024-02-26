@@ -14,46 +14,58 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF7F7FB),
-      appBar: const MyAppBar(),
-      drawer: MyDrawer(drawerItems: [
-        DrawerItem(
-          title: 'Menu',
-          onTap: _goToMenuScreen,
-        ),
-        DrawerItem(
-          title: 'TapRoom',
-          onTap: () {},
-        ),
-        DrawerItem(
-          title: 'Contact',
-          onTap: _goToContact,
-        ),
-      ]),
-      body: const SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+      body: Padding(
+        padding: const EdgeInsets.only(top: 20.0,
+        right: 20.0,
+        left: 20.0),
+        child: Stack(
           children: [
-            MySearchBar(
-              hintText: 'What do you want today buqui?',
-              // onSearch: (String value) {},
-            ),
-            BuquiBurgers(),
-          ],
-        ),
-      ),
-      bottomNavigationBar: const MyHomeButtons(),
-      floatingActionButton: FloatingActionButton.small(
-        backgroundColor: Colors.black26,
-        foregroundColor: Colors.orangeAccent,
-        splashColor: Colors.orangeAccent.withOpacity(0.28),
-        shape: const CircleBorder(),
-        onPressed: () {
-          _goToAboutUs();
-        },
-        child: const Icon(
-          Icons.question_mark,
-          semanticLabel: 'About us',
+            Scaffold(
+              backgroundColor: const Color(0xFFF7F7FB),
+              appBar: const MyAppBar(),
+              drawer: MyDrawer(drawerItems: [
+                DrawerItem(
+                  title: 'Menu',
+                  onTap: _goToMenuScreen,
+                ),
+                DrawerItem(
+                  title: 'TapRoom',
+                  onTap: () {},
+                ),
+                DrawerItem(
+                  title: 'Contact',
+                  onTap: _goToContact,
+                ),
+              ]),
+              body: const SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    MySearchBar(
+                      hintText: 'What do you want today buqui?',
+                      // onSearch: (String value) {},
+                    ),
+                    BuquiBurgers(),
+                  ],
+                ),
+              ),
+              bottomNavigationBar: const MyHomeButtons(),
+              floatingActionButton: FloatingActionButton.small(
+                backgroundColor: Colors.black26,
+                foregroundColor: Colors.orangeAccent,
+                splashColor: Colors.orangeAccent.withOpacity(0.28),
+                shape: const CircleBorder(),
+                onPressed: () {
+                  _goToAboutUs();
+                },
+                child: const Icon(
+                  Icons.question_mark,
+                  semanticLabel: 'About us',
+                ),
+              ),
+            )
+          ], //the previous code
         ),
       ),
     );
@@ -71,3 +83,5 @@ class MyHomePage extends StatelessWidget {
     router.go('/about');
   }
 }
+
+//
