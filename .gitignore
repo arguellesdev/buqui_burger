@@ -10,7 +10,7 @@
 .svn/
 migrate_working_dir/
 ios/firebase_app_id_file.json
-
+lib/firebase_options.dart
 # IntelliJ related
 *.iml
 *.ipr
