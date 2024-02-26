@@ -36,10 +36,10 @@ class MyHomePage extends StatelessWidget {
               // onSearch: (String value) {},
             ),
             BuquiBurgers(),
-            MyHomeButtons(),
           ],
         ),
       ),
+      bottomNavigationBar: const MyHomeButtons(),
       floatingActionButton: FloatingActionButton.small(
         backgroundColor: Colors.black26,
         foregroundColor: Colors.orangeAccent,

@@ -6,7 +6,7 @@ class MyHomeButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.all(8.0),
+    return Padding(padding: const EdgeInsets.all(8.0),
     child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
