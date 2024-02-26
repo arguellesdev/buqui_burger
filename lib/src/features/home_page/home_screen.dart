@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
         ),
         DrawerItem(
           title: 'TapRoom',
-          onTap: (){},
+          onTap: () {},
         ),
         DrawerItem(
           title: 'Contact',

@@ -19,4 +19,5 @@ const imageUrls = [
 'https://static.wixstatic.com/media/1c6db2_52e83a98887d4e6db1a887fd861b6a9f~mv2.jpg/v1/fit/w_2500,h_1330,al_c/1c6db2_52e83a98887d4e6db1a887fd861b6a9f~mv2.jpg',
 'https://mouthbysouthwest.com/wp-content/uploads/2023/07/BuquiBichi071723.jpg',
 'https://lumari.mx/wp-content/uploads/2019/07/BBN_08.jpg',
+'https://media-cdn.tripadvisor.com/media/photo-s/10/0b/62/d3/buqui-bichi-en-todas.jpg'
 ];
