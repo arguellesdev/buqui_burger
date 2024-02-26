@@ -14,7 +14,7 @@ class BuquiBurgers extends StatelessWidget {
           Image.network(
               'https://mouthbysouthwest.com/wp-content/uploads/2023/07/BuquiBichi071723.jpg'),
           Image.network(
-              'https://www.informador.mx/__export/1575165778639/sites/elinformador/img/2019/11/30/2_1_crop1575165583325.jpg_1970638775.jpg'),
+              'https://mouthbysouthwest.com/wp-content/uploads/2024/01/BuquiBichi010224.jpg'),
         ],
       ),
     );
