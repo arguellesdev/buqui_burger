@@ -1,5 +1,6 @@
 import 'package:buqui_burgers/src/common_widgets/hp_menu_drawer.dart';
 import 'package:buqui_burgers/src/features/home_page/buqui_page.dart';
+import 'package:buqui_burgers/src/features/home_page/home_buttons.dart';
 import 'package:buqui_burgers/src/routes/b_routes.dart';
 import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
 import "package:flutter/material.dart";
@@ -35,6 +36,7 @@ class MyHomePage extends StatelessWidget {
               // onSearch: (String value) {},
             ),
             BuquiBurgers(),
+            MyHomeButtons(),
           ],
         ),
       ),
