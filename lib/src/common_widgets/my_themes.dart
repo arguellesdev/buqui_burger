@@ -7,3 +7,11 @@ class MyTextStyle {
     fontWeight: FontWeight.bold,
   );
 }
+
+final commonButtonStyle = ElevatedButton.styleFrom(
+  backgroundColor: Colors.black26,
+  foregroundColor: Colors.amber,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(12),
+  ),
+);

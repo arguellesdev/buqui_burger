@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/common_widgets/my_themes.dart';
 import 'package:flutter/material.dart';
 
 class BuquiBurgers extends StatelessWidget {
@@ -5,11 +6,12 @@ class BuquiBurgers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textScaleFactor = MediaQuery.of(context).textScaler;
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(12),
           child: Row(
             verticalDirection: VerticalDirection.down ,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -31,62 +33,43 @@ class BuquiBurgers extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(24),
+        SizedBox(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black26,
-                foregroundColor: Colors.yellow,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
+              Expanded (
+                child: ElevatedButton.icon(
+                style: commonButtonStyle,
                 onPressed: () {},
                 icon: const Icon(Icons.call_end_rounded),
-                label: const Text('Call us',
+                label: Text('Call us',
                   style: TextStyle(
-                      fontFamily:'DIN Alternate',
-                    letterSpacing: 2,
-                    wordSpacing: 4,
+                    fontFamily:'DIN Alternate',
+                    fontSize: textScaleFactor.scale(14.0),
                   ),),
-              ),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black26,
-                  foregroundColor: Colors.yellow,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
+              ),),
+              Expanded(child: ElevatedButton.icon(
+                style: commonButtonStyle,
                 onPressed: () {},
                 icon: const Icon(Icons.share_location),
-                label: const Text('Where the buquis are',
+                label:  Text('Where',
                   style: TextStyle(
                     fontFamily:'DIN Condensed',
-                    letterSpacing: 2,
-                ),
-                ),
-              ),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black26,
-                  foregroundColor: Colors.yellow,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    fontSize: textScaleFactor.scale(14.0),
                   ),
                 ),
+              ),),
+              Expanded(child: ElevatedButton.icon(
+                style: commonButtonStyle,
                 onPressed: () {},
                 icon: const Icon(Icons.share),
-                label: const Text('Share to your buquis',
-                style: TextStyle(
-                  fontFamily:'DIN Condensed',
-                  letterSpacing: 2,
+                label: Text('Share',
+                  style: TextStyle(
+                    fontFamily:'DIN Condensed',
+                    fontSize: textScaleFactor.scale(14.0),
+                  ),
                 ),
-                ),
-              ),
+              ),),
             ],
           ),
         )

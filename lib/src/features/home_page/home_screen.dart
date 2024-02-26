@@ -53,11 +53,12 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+
   void _goToMenuScreen() {
     router.go('/menu');
   }
+
   void _goToAboutUs() {
     router.go('/about');
   }
 }
-

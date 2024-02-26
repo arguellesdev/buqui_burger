@@ -18,8 +18,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         style: TextStyle(
           color: Colors.black54,
           fontWeight: FontWeight.bold,
-          wordSpacing: 12,
-          letterSpacing: 9,
+          wordSpacing: 9,
+          letterSpacing: 2,
         ),
       ),
       foregroundColor: Colors.black38,
