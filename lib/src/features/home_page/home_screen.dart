@@ -24,7 +24,8 @@ class MyHomePage extends StatelessWidget {
           title: 'TapRoom',
           onTap: () {},
         ),
-        DrawerItem(title: 'Contact', onTap: () {}),
+        DrawerItem(title: 'Contact', onTap: () {}
+        ),
       ]),
       body: const SingleChildScrollView(
         child: Column(
@@ -55,11 +56,9 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
-
   void _goToMenuScreen() {
     router.go('/menu');
   }
-
   void _goToAboutUs() {
     router.go('/about');
   }

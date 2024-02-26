@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MySearchBar extends StatelessWidget {
@@ -12,14 +13,8 @@ class MySearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(37),
-          bottomRight: Radius.circular(37),
-        ),
-        gradient: LinearGradient(
-          colors: [Color(0xFFF9881F), Color(0xFFFF774C)],
-          stops: [0.4, 0.6],
-        ),
+        borderRadius: BorderRadius.all(Radius.circular(37)),
+        color: Colors.white60,
       ),
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: TextField(

@@ -13,6 +13,7 @@ class _ContainerThemeState extends State<ContainerTheme> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(37)),
           gradient: LinearGradient(
         colors: [Color(0xFFF9881F), Color(0xFFFF774C)],
         stops: [0.2, 0.6],

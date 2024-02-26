@@ -1,4 +1,5 @@
 import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
+import 'package:buqui_burgers/src/common_widgets/my_themes.dart';
 import 'package:flutter/material.dart';
 
 class AboutUs extends StatelessWidget {
@@ -8,10 +9,15 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.white60,
+        title: const Text('Who the buquis are (About us)',
+          style: TextStyle(    color: Colors.white60,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         flexibleSpace: const ContainerTheme(),
-        backgroundColor: Colors.amber.withOpacity(0.72),
-        foregroundColor: Colors.brown,
-        title: const Text('Who the buquis are (About us)'),
       ),
       body: SingleChildScrollView (
         child: Column(

@@ -25,14 +25,15 @@ class _MyMenuState extends State<MyMenu> {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: const ContainerTheme(),
-        foregroundColor: Colors.brown,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.white60,
         title: const Text('The Buqui Bichi Menu'),
         titleSpacing: 1.2,
         titleTextStyle: const TextStyle(
-            fontSize: 18,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
             overflow: TextOverflow.fade,
-            color: Colors.brown),
+            color: Colors.white60),
       ),
       // endDrawer: ,
       body: PageView.builder(
