@@ -59,14 +59,14 @@ class _BottomNavigationBarExampleState
               appBar: AppBar(
                 flexibleSpace: const ContainerTheme(),
                 backgroundColor: const Color(0xFFF7F7FB),
-                foregroundColor: Colors.white60,
+                foregroundColor: Colors.white,
                 title: const Text('Contact us'),
                 titleSpacing: 1.2,
                 titleTextStyle: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     overflow: TextOverflow.fade,
-                    color: Colors.white60),
+                    color: Colors.white),
               ),
               body: SingleChildScrollView(
                 child: Column(
@@ -76,17 +76,15 @@ class _BottomNavigationBarExampleState
                   children: [
                     Container(
                       color: Colors.transparent,
-                      height: 150.0,
+                      height: 200.0,
                       alignment: Alignment.center,
                       child: _widgetOptions.elementAt(_selectedIndex),
                     ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child: Image.network(
-                        'https://lumari.mx/wp-content/uploads/2019/07/BBN_11-800x533.jpg',
-                        fit: BoxFit.cover, width: double.infinity,
-                      ),
-                    )
+                    Image.network(
+                      'https://static.wixstatic.com/media/3efee9_d3d16f0e618040af97b0ad01abcd03b3~mv2.png/v1/fill/w_1184,h_360,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/cervezas_pngs.png',
+                      // 'https://lumari.mx/wp-content/uploads/2019/07/BBN_11-800x533.jpg',
+                      fit: BoxFit.cover,
+                    ),
                   ],
                 ),
               ),
