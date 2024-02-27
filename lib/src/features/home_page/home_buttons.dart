@@ -53,7 +53,7 @@ class CustomBuquiButton extends StatelessWidget {
         label,
         style: TextStyle(
           fontFamily: 'DIN Alternate',
-          fontSize: textScaleFactor.scale(12), // Use responsive text scaling for accessibility
+          fontSize: textScaleFactor.scale(12),
         ),
       ),
     );
