@@ -53,7 +53,7 @@ class MyHomePage extends StatelessWidget {
               bottomNavigationBar: const MyHomeButtons(),
               floatingActionButton: FloatingActionButton.small(
                 backgroundColor: Colors.cyan.withOpacity(.64),
-                foregroundColor: Colors.amber,
+                foregroundColor: Colors.white,
                 splashColor: Colors.orangeAccent.withOpacity(0.80),
                 shape: const CircleBorder(),
                 elevation: 2,
