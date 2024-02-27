@@ -26,12 +26,12 @@ class _BottomNavigationBarExampleState
   int _selectedIndex = 0;
 
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
+      TextStyle(color: Colors.grey, fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Futura');
 
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       textAlign: TextAlign.center,
-      'Blvd. Juan Navarrete 502 \n Hermosillo, Sonora, Mexico, \n Postal Code  83249',
+      'Boulevard Juan Navarrete 502 \n Hermosillo, Sonora, Mexico \n Postal Code: 83249',
       style: optionStyle,
     ),
     Text(
