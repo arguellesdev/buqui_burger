@@ -14,61 +14,56 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xFFF7F7FB),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 60.0,
-        right: 20.0,
-        left: 20.0),
-        child: Stack(
-          children: [
-            Scaffold(
-              backgroundColor: const Color(0xFFF7F7FB),
-              appBar: const MyAppBar(),
-              drawer: MyDrawer(drawerItems: [
-                DrawerItem(
-                  title: 'Menu',
-                  onTap: _goToMenuScreen,
-                ),
-                DrawerItem(
-                  title: 'TapRoom',
-                  onTap: () {},
-                ),
-                DrawerItem(
-                  title: 'Contact',
-                  onTap: _goToContact,
-                ),
-              ]),
-              body: const SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    MySearchBar(
-                      hintText: 'What do you want today buqui?',
-                      // onSearch: (String value) {},
-                    ),
-                    BuquiBurgers(),
-                  ],
-                ),
+      body: Stack(
+        children: [
+          Scaffold(
+            backgroundColor: const Color(0xFFF7F7FB),
+            appBar: const MyAppBar(),
+            drawer: MyDrawer(drawerItems: [
+              DrawerItem(
+                title: 'Menu',
+                onTap: _goToMenuScreen,
               ),
-              bottomNavigationBar: const MyHomeButtons(),
-              floatingActionButton: FloatingActionButton.small(
-                backgroundColor: Colors.cyan.withOpacity(.64),
-                foregroundColor: Colors.white,
-                splashColor: Colors.orangeAccent.withOpacity(0.80),
-                shape: const CircleBorder(),
-                elevation: 2,
-                focusElevation: 4,
-                onPressed: () {
-                  _goToAboutUs();
-                },
-                child: const Icon(
-                  Icons.question_mark,
-                  semanticLabel: 'About us',
-                ),
+              DrawerItem(
+                title: 'TapRoom',
+                onTap: () {},
               ),
-            )
-          ],
-        ),
+              DrawerItem(
+                title: 'Contact',
+                onTap: _goToContact,
+              ),
+            ]),
+            body: const SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  MySearchBar(
+                    hintText: 'What do you want today buqui?',
+                    // onSearch: (String value) {},
+                  ),
+                  BuquiBurgers(),
+                ],
+              ),
+            ),
+            bottomNavigationBar: const MyHomeButtons(),
+            floatingActionButton: FloatingActionButton.small(
+              backgroundColor: Colors.cyan.withOpacity(.64),
+              foregroundColor: Colors.white,
+              splashColor: Colors.orangeAccent.withOpacity(0.80),
+              shape: const CircleBorder(),
+              elevation: 2,
+              focusElevation: 4,
+              onPressed: () {
+                _goToAboutUs();
+              },
+              child: const Icon(
+                Icons.question_mark,
+                semanticLabel: 'About us',
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
