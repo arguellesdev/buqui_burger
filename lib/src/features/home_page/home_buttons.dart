@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../common_widgets/my_themes.dart';
+import '../../routes/b_routes.dart';
 class MyHomeButtons extends StatelessWidget {
   const MyHomeButtons({super.key});
 
@@ -13,7 +13,7 @@ class MyHomeButtons extends StatelessWidget {
         CustomBuquiButton(
         icon: Icons.call_end_rounded,
         label: 'Call us',
-        onPressed: () {}, // Replace with actual call functionality Anya
+        onPressed: () {router.go('/contact');}, // Replace with actual call functionality Anya
       ),
         CustomBuquiButton(
           icon: Icons.share_location,

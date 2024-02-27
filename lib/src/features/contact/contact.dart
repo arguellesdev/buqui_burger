@@ -89,17 +89,18 @@ class _BottomNavigationBarExampleState
                 ),
               ),
               floatingActionButton: FloatingActionButton(
+                shape: const CircleBorder(),
                 onPressed: _goToHomeScreen,
                 elevation: 1,
                 backgroundColor: const Color(0xFFF9881F),
-                child: const Icon(Icons.home),
+                child: const Icon(Icons.home_rounded),
               ),
               bottomNavigationBar: BottomNavigationBar(
                 backgroundColor: const Color(0xFFF9881F),
                 items: const <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
                     icon: Icon(Icons.location_on),
-                    label: 'Buqi\'s Home',
+                    label: 'Buqui\'s Home',
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.call_rounded),
