@@ -13,7 +13,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFFF7F7FB),
       body: Padding(
         padding: const EdgeInsets.only(top: 60.0,
         right: 20.0,
@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
         child: Stack(
           children: [
             Scaffold(
-              backgroundColor: Colors.white,
+              backgroundColor: const Color(0xFFF7F7FB),
               appBar: const MyAppBar(),
               drawer: MyDrawer(drawerItems: [
                 DrawerItem(
