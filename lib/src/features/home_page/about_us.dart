@@ -7,7 +7,7 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFFF7F7FB),
+      backgroundColor: const Color(0xFFF7F7FB),
       body: Padding(
         padding: const EdgeInsets.only(top: 20, right: 21, left: 21),
         child: Stack(
@@ -16,15 +16,18 @@ class AboutUs extends StatelessWidget {
               appBar: AppBar(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.white60,
-                title: const Text('Who the buquis are (About us)',
-                  style: TextStyle(    color: Colors.white60,
-                    fontSize: 22,
+                title: const Text(
+                  textAlign: TextAlign.center,
+                  'Who the buquis are\n (About us)',
+                  style: TextStyle(
+                    color: Colors.white60,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 flexibleSpace: const ContainerTheme(),
               ),
-              body: SingleChildScrollView (
+              body: SingleChildScrollView(
                 child: Column(
                   children: [
                     Image.network(
@@ -38,8 +41,7 @@ class AboutUs extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.black38,
                             fontSize: 14,
-                            fontFamily: 'Kosugi Maru'
-                        ),
+                            fontFamily: 'Kosugi Maru'),
                       ),
                     ),
                   ],

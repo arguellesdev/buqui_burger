@@ -10,23 +10,29 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      foregroundColor: Colors.white,
+      backgroundColor: const Color(0xFFF7F7FB),
+      elevation: 2, flexibleSpace:  const
+      ContainerTheme(),
       iconTheme: const IconThemeData(
         color: Colors.black38,
       ),
-      title: const Text(
-        'Buqui Burgers',
-        style: TextStyle(
-          color: Colors.black54,
-          fontWeight: FontWeight.bold,
-          wordSpacing: 9,
-          letterSpacing: 2,
+      title: const Center(
+        child: Text(
+          'Buqui Burgers',
+          style: TextStyle(
+            color: Colors.black54,
+            fontWeight: FontWeight.bold,
+            wordSpacing: 9,
+            letterSpacing: 2,
+          ),
+          textAlign: TextAlign.center,
         ),
       ),
-      foregroundColor: Colors.black38,
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-    flexibleSpace: const ContainerTheme(),
+
     );
   }
 }
+
+
 

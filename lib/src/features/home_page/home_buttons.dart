@@ -13,17 +13,17 @@ class MyHomeButtons extends StatelessWidget {
         CustomBuquiButton(
         icon: Icons.call_end_rounded,
         label: 'Call us',
-        onPressed: () {}, // Replace with actual call functionality
+        onPressed: () {}, // Replace with actual call functionality Anya
       ),
         CustomBuquiButton(
           icon: Icons.share_location,
           label: 'Where',
-          onPressed: () {}, // Replace with location-related action
+          onPressed: () {}, // Replace with location-related action Anya
         ),
         CustomBuquiButton(
           icon: Icons.share,
           label: 'Share',
-          onPressed: () {}, // Replace with sharing action
+          onPressed: () {}, // Replace with sharing action Anya
         ),],
         ),
     );

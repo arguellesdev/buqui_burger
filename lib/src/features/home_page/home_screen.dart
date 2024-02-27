@@ -13,15 +13,15 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F7FB),
+      backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(top: 20.0,
+        padding: const EdgeInsets.only(top: 60.0,
         right: 20.0,
         left: 20.0),
         child: Stack(
           children: [
             Scaffold(
-              backgroundColor: const Color(0xFFF7F7FB),
+              backgroundColor: Colors.white,
               appBar: const MyAppBar(),
               drawer: MyDrawer(drawerItems: [
                 DrawerItem(
@@ -52,10 +52,12 @@ class MyHomePage extends StatelessWidget {
               ),
               bottomNavigationBar: const MyHomeButtons(),
               floatingActionButton: FloatingActionButton.small(
-                backgroundColor: Colors.black26,
-                foregroundColor: Colors.orangeAccent,
-                splashColor: Colors.orangeAccent.withOpacity(0.28),
+                backgroundColor: Colors.cyan.withOpacity(.64),
+                foregroundColor: Colors.amber,
+                splashColor: Colors.orangeAccent.withOpacity(0.80),
                 shape: const CircleBorder(),
+                elevation: 2,
+                focusElevation: 4,
                 onPressed: () {
                   _goToAboutUs();
                 },
