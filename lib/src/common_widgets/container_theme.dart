@@ -14,11 +14,10 @@ class _ContainerThemeState extends State<ContainerTheme> {
     return Container(
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(64),
-            topRight: Radius.circular(28),
-            bottomRight: Radius.circular(64),
-            bottomLeft: Radius.circular(28)
-            
+            topLeft: Radius.circular(82),
+            topRight: Radius.circular(19),
+            bottomRight: Radius.circular(82),
+            bottomLeft: Radius.circular(19),
           ),
           gradient: LinearGradient(
         colors: [Color(0xFFF9881F), Color(0xFFFF774C)],
