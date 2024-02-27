@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
         ),
         DrawerItem(
           title: 'TapRoom',
-          onTap: () {},
+          onTap: _goToTapRoom,
         ),
         DrawerItem(
           title: 'Contact',
@@ -74,4 +74,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-//
+void _goToTapRoom() {
+  router.go('/taproom');
+}
+

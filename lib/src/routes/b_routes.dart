@@ -2,6 +2,7 @@ import 'package:buqui_burgers/src/features/contact/contact.dart';
 import 'package:buqui_burgers/src/features/home_page/about_us.dart';
 import 'package:buqui_burgers/src/features/home_page/home_screen.dart';
 import 'package:buqui_burgers/src/features/menu/menu.dart';
+import 'package:buqui_burgers/src/features/taproom/taproom_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
@@ -20,6 +21,9 @@ final router = GoRouter(
           ),
           GoRoute(path: 'contact',
           builder: (context, state) => const ContactBuqui(),
+          ),
+          GoRoute(path: 'taproom',
+            builder: (context, state) => const MyTapRoomScreen(),
           )
         ]),
   ],
