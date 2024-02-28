@@ -33,7 +33,7 @@ class _BottomNavigationBarExampleState
       fontWeight: FontWeight.bold,
       fontFamily: 'Futura');
 
-  static const List<Widget> _widgetOptions = <Widget>[
+  static const List _widgetOptions = [
     Text(
       textAlign: TextAlign.center,
       'Boulevard Juan Navarrete 502 \n Hermosillo, Sonora, Mexico \n Postal Code: 83249',
