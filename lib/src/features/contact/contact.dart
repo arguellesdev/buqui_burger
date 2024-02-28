@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import '../../common_widgets/container_theme.dart';
 import '../../routes/b_routes.dart';
 
-
 class ContactBuqui extends StatelessWidget {
   const ContactBuqui({super.key});
 
@@ -66,10 +65,14 @@ class _BottomNavigationBarExampleState
             fontWeight: FontWeight.bold,
             overflow: TextOverflow.fade,
             color: Colors.white),
-        leading: InkWell(
-          onTap:() {GoRouter.of(context).go('/');},
-              child: const Icon(Icons.arrow_back_ios),
-        )
+        // leading: InkWell(
+        //   onTap:() {GoRouter.of(context).go('/');},
+        //       child: const Icon(Icons.home),
+        // )
+        leading: IconButton(
+          onPressed: () => GoRouter.of(context).go('/'),
+          icon: const Icon(Icons.home),
+        ),
       ),
       backgroundColor: const Color(0xFFF7F7FB),
       body: Padding(

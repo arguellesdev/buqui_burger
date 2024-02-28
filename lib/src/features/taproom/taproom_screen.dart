@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 
 class MyTapRoomScreen extends StatefulWidget {
-  const MyTapRoomScreen({Key? key}) : super(key: key);
+  const MyTapRoomScreen({super.key});
 
   @override
   State<MyTapRoomScreen> createState() => _MyTapRoomScreenState();
