@@ -20,11 +20,22 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(const Duration(seconds: 7), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 5), (Timer timer) {
       setState(() {
         _imageIndex = (_imageIndex + 1) % _animatedImageUrls.length;
       });
     });
+  }
+
+  Widget _buildTransition(Widget child, Animation<double> animation) {
+    final offsetAnimation = Tween<Offset>(
+      begin: const Offset(1.0, 0.0),
+      end: Offset.zero,
+    ).animate(animation);
+    return SlideTransition(
+      position: offsetAnimation,
+      child: child,
+    );
   }
 
   @override
@@ -42,16 +53,7 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
             reverseDuration: const Duration(milliseconds: 541),
             switchInCurve: Curves.easeInOut,
             switchOutCurve: Curves.easeInOut,
-            transitionBuilder: (Widget child, Animation<double> animation) {
-              final offsetAnimation = Tween<Offset>(
-                begin: const Offset(1.0, 0.0),
-                end: Offset.zero,
-              ).animate(animation);
-              return SlideTransition(
-                position: offsetAnimation,
-                child: child,
-              );
-            },
+            transitionBuilder: _buildTransition,
             child: Image.network(
               _animatedImageUrls[_imageIndex],
               key: ValueKey<int>(_imageIndex),
