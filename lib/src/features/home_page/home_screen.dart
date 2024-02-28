@@ -29,17 +29,20 @@ class MyHomePage extends StatelessWidget {
           onTap: _goToContact,
         ),
       ]),
-      body: const SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            MySearchBar(
-              hintText: 'What do you want today buqui?',
-              // onSearch: (String value) {},
-            ),
-            BuquiBurgers(),
-          ],
+      body: const Padding(
+        padding: EdgeInsets.only(right: 22, left: 22),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              MySearchBar(
+                hintText: 'What do you want today buqui?',
+                // onSearch: (String value) {},
+              ),
+              BuquiBurgers(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: const MyHomeButtons(),
