@@ -1,10 +1,9 @@
 import 'dart:async';
-
-import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 
 class MyTapRoomScreen extends StatefulWidget {
-  const MyTapRoomScreen({super.key});
+  const MyTapRoomScreen({Key? key}) : super(key: key);
 
   @override
   State<MyTapRoomScreen> createState() => _MyTapRoomScreenState();
@@ -26,7 +25,7 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
         _imageIndex = (_imageIndex + 1) % _animatedImageUrls.length;
       });
     });
-  } //this time is for holding the image Anya
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,21 +38,24 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
         ),
         body: Center(
           child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 541), //this time is for images transition between Anya
-            reverseDuration: const Duration(milliseconds: 541),//this time is for cycle Anya
-            switchInCurve: Curves.easeIn,
-            switchOutCurve: Curves.easeOut,
-            key: ValueKey<int>(_imageIndex),
-            child: Image.network(_animatedImageUrls[_imageIndex]),
+            duration: const Duration(milliseconds: 541),
+            reverseDuration: const Duration(milliseconds: 541),
+            switchInCurve: Curves.easeInOut,
+            switchOutCurve: Curves.easeInOut,
             transitionBuilder: (Widget child, Animation<double> animation) {
-              return FadeTransition(
-                opacity: animation,
-                child: ScaleTransition(
-                  scale: animation,
-                  child: child,
-                ),
+              final offsetAnimation = Tween<Offset>(
+                begin: const Offset(1.0, 0.0),
+                end: Offset.zero,
+              ).animate(animation);
+              return SlideTransition(
+                position: offsetAnimation,
+                child: child,
               );
             },
+            child: Image.network(
+              _animatedImageUrls[_imageIndex],
+              key: ValueKey<int>(_imageIndex),
+            ),
           ),
         ),
       ),
