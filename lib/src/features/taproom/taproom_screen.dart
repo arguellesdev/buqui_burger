@@ -21,7 +21,7 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(const Duration(seconds: 3), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 7), (Timer timer) {
       setState(() {
         _imageIndex = (_imageIndex + 1) % _animatedImageUrls.length;
       });
@@ -41,8 +41,8 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 541), //this time is for images transition between Anya
             reverseDuration: const Duration(milliseconds: 541),//this time is for cycle Anya
-            switchInCurve: Curves.easeInOut,
-            switchOutCurve: Curves.easeInOut,
+            switchInCurve: Curves.easeIn,
+            switchOutCurve: Curves.easeOut,
             key: ValueKey<int>(_imageIndex),
             child: Image.network(_animatedImageUrls[_imageIndex]),
             transitionBuilder: (Widget child, Animation<double> animation) {
