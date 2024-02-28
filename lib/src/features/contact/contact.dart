@@ -66,10 +66,14 @@ class _BottomNavigationBarExampleState
             fontWeight: FontWeight.bold,
             overflow: TextOverflow.fade,
             color: Colors.white),
-        leading: InkWell(
-          onTap:() {GoRouter.of(context).go('/');},
-              child: const Icon(Icons.arrow_back_ios),
-        )
+        leading: IconButton(
+          onPressed: () => GoRouter.of(context).go('/'),
+          icon: const Icon(Icons.home),
+        ),
+        // leading: InkWell(
+        //   onTap:() {GoRouter.of(context).go('/');},
+        //       child: const Icon(Icons.arrow_back_ios),
+        // )
       ),
       backgroundColor: const Color(0xFFF7F7FB),
       body: Padding(
