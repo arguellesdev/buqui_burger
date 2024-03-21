@@ -29,10 +29,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           textAlign: TextAlign.center,
         ),
       ),
-
     );
   }
 }
-
-
-

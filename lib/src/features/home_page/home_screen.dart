@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
           title: 'Contact',
           onTap: _goToContact,
         ),
+        DrawerItem(title: 'Sign In', onTap: _goToSignIn)
       ]),
       body: const Padding(
         padding: EdgeInsets.only(right: 22, left: 22),
@@ -65,19 +66,22 @@ class MyHomePage extends StatelessWidget {
   }
 
   void _goToMenuScreen() {
-    router.go('/menu');
+    router.goNamed(AppRoute.menu.name);
   }
 
   void _goToContact() {
-    router.go('/contact');
+    router.pushNamed(AppRoute.contactUs.name);
   }
 
   void _goToAboutUs() {
-    router.go('/about');
+    router.pushNamed(AppRoute.aboutUs.name);
   }
 }
 
 void _goToTapRoom() {
-  router.go('/taproom');
+  router.goNamed(AppRoute.taproom.name);
 }
 
+void _goToSignIn() {
+  router.pushNamed(AppRoute.signIn.name);
+}
