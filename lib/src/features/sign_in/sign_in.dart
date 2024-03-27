@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 import '../../assets/text_forms_assets.dart';
 
-class SignInForm extends StatefulWidget {
-  const SignInForm({super.key});
+class LogInForm extends StatefulWidget {
+  const LogInForm({super.key});
 
   @override
-  State<SignInForm> createState() => _SignInState();
+  State<LogInForm> createState() => _LogInState();
 }
 
-class _SignInState extends State<SignInForm> {
+class _LogInState extends State<LogInForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
 
@@ -36,7 +36,7 @@ class _SignInState extends State<SignInForm> {
                   const MyVerticalSpaceBox(
                     height: 100,
                   ),
-                  const SignInFields(),
+                  const LogInFields(),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 22.0),
                     child: ElevatedButton(

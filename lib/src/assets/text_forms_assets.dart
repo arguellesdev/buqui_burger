@@ -1,14 +1,14 @@
 import 'package:buqui_burgers/src/assets/space_sized_box.dart';
 import 'package:flutter/material.dart';
 
-class SignInFields extends StatefulWidget {
-  const SignInFields({super.key});
+class LogInFields extends StatefulWidget {
+  const LogInFields({super.key});
 
   @override
-  State<SignInFields> createState() => _SignInFieldsState();
+  State<LogInFields> createState() => _LogInFieldsState();
 }
 
-class _SignInFieldsState extends State<SignInFields> {
+class _LogInFieldsState extends State<LogInFields> {
   final _nameController = TextEditingController();
 
   @override

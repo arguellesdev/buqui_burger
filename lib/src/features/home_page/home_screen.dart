@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
           title: 'Contact',
           onTap: _goToContact,
         ),
-        DrawerItem(title: 'Sign In', onTap: _goToSignIn)
+        DrawerItem(title: 'Log In', onTap: _goToLogIn)
       ]),
       body: const Padding(
         padding: EdgeInsets.only(right: 22, left: 22),
@@ -82,6 +82,6 @@ void _goToTapRoom() {
   router.goNamed(AppRoute.taproom.name);
 }
 
-void _goToSignIn() {
+void _goToLogIn() {
   router.pushNamed(AppRoute.signIn.name);
 }

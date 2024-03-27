@@ -41,7 +41,7 @@ final router = GoRouter(
               path: 'signIn',
               name: AppRoute.signIn.name,
               pageBuilder: (context, state) => const MaterialPage(
-                  fullscreenDialog: true, child: SignInForm())),
+                  fullscreenDialog: true, child: LogInForm())),
         ]),
   ],
   errorBuilder: (context, state) => const NotFoundScreen(),

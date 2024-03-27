@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../assets/constants.dart';
@@ -46,12 +47,14 @@ class _ContactNavigationState extends State<ContactNavigation> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-                height: 200.0,
-                alignment: Alignment.center,
-                child: _selectedIndex == 0
-                    ? const LocationTap()
-                    : const PhoneCallTap()),
+            IndexedStack(
+              index: _selectedIndex,
+              children: const [
+                LocationTap(),
+                PhoneCallTap(),
+              ],
+            ),
+            const SizedBox(height: 20), // Espacio entre contenido y la imagen
             Image.network(
               imageUrls[4],
               fit: BoxFit.cover,
@@ -66,20 +69,14 @@ class _ContactNavigationState extends State<ContactNavigation> {
         backgroundColor: iColor2,
         child: const Icon(Icons.travel_explore, color: Colors.white70),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: baseColor2,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.location_on),
-            label: 'Buqui\'s Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.call_rounded),
-            label: 'Call us',
-          ),
+        animationDuration: const Duration(milliseconds: 500),
+        items: const [
+          Icon(Icons.location_on),
+          Icon(Icons.call),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white54,
+        index: _selectedIndex,
         onTap: _onItemTapped,
       ),
     );
