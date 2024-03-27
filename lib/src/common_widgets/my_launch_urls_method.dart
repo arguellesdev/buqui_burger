@@ -1,7 +1,7 @@
 import 'package:url_launcher/url_launcher.dart';
 import '../mocks/location_mocks.dart';
 
-void locationUrls(int index) async {
+void launchLocationUrls(int index) async {
   if (index < 0 || index >= locationUrl.length) {
     throw Exception('We don\'t find the buqui place');
   }
@@ -12,9 +12,3 @@ void locationUrls(int index) async {
     throw 'Could not launch URL: $locationUrlString';
   }
 }
-
-// void launchUrlFromList(int index) async {
-//   if (index < 0 || index >= locationUrl.length) {
-//     throw Exception('Whe don\'t find the buqui place');
-//   }
-// }

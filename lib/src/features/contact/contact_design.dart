@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:url_launcher/url_launcher.dart';
-import '../../assets/constants.dart';
+import '../../assets/space_sized_box.dart';
 import '../../common_widgets/container_theme.dart';
-import '../../common_widgets/launch_urls.dart';
+import '../../common_widgets/my_launch_urls_method.dart';
 import '../../mocks/food_mocks.dart';
-import '../../mocks/location_mocks.dart';
 import '../../routes/b_routes.dart';
 
 class ContactNavigation extends StatefulWidget {
@@ -55,29 +53,48 @@ class _ContactNavigationState extends State<ContactNavigation> {
               color: Colors.transparent,
               height: 200.0,
               alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
                 children: [
-                  IconButton(
-                    onPressed: () => locationUrls(0),
-                    icon: const Icon(Icons.location_on_rounded),
-                    color: const Color(0xFFFF774C),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // ...locationUrl.asMap().
+                      IconButton(
+                        onPressed: () => launchLocationUrls(0),
+                        icon: const Icon(Icons.location_on_rounded),
+                        color: const Color(0xFFFF774C),
+                        tooltip: 'Navarrete',
+                      ),
+                      const MyHorizontalSpaceBox(
+                        height: 100,
+                        width: 4,
+                      ),
+                      IconButton(
+                        onPressed: () => launchLocationUrls(1),
+                        icon: const Icon(Icons.location_on_rounded),
+                        color: const Color(0xFFFF774C),
+                        tooltip: 'Kino',
+                      ),
+                      const MyHorizontalSpaceBox(
+                        height: 100,
+                        width: 4,
+                      ),
+                      IconButton(
+                          onPressed: () => launchLocationUrls(2),
+                          icon: const Icon(Icons.location_on_rounded),
+                          color: const Color(0xFFFF774C),
+                          tooltip: 'MH69'),
+                      const MyHorizontalSpaceBox(
+                        height: 100,
+                        width: 4,
+                      ),
+                      IconButton(
+                          onPressed: () => launchLocationUrls(3),
+                          icon: const Icon(Icons.location_on_rounded),
+                          color: const Color(0xFFFF774C),
+                          tooltip: 'Morelos'),
+                    ],
                   ),
-                  const MySizedBox(),
-                  IconButton(
-                      onPressed: () => locationUrls(1),
-                      icon: const Icon(Icons.location_on_rounded),
-                      color: const Color(0xFFFF774C)),
-                  const MySizedBox(),
-                  IconButton(
-                      onPressed: () => locationUrls(2),
-                      icon: const Icon(Icons.location_on_rounded),
-                      color: const Color(0xFFFF774C)),
-                  const MySizedBox(),
-                  IconButton(
-                      onPressed: () => locationUrls(3),
-                      icon: const Icon(Icons.location_on_rounded),
-                      color: const Color(0xFFFF774C)),
                 ],
               ),
             ),
