@@ -1,5 +1,5 @@
-import 'package:buqui_burgers/src/features/contact/contact_design.dart';
 import 'package:flutter/material.dart';
+import 'contact_screen.dart';
 
 class ContactBuqui extends StatelessWidget {
   const ContactBuqui({super.key});
