@@ -32,14 +32,17 @@ class DrawerBuilder {
 
 class MyDrawer extends StatelessWidget {
   final List<DrawerItem> drawerItems;
-
-  const MyDrawer({super.key, required this.drawerItems});
+  final String semanticMessage;
+  const MyDrawer(
+      {super.key, required this.drawerItems, required this.semanticMessage});
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: SafeArea(
-        child: DrawerBuilder(items: drawerItems).build(
+    return Semantics(
+      label: semanticMessage,
+      child: Drawer(
+        child: SafeArea(
+          child: DrawerBuilder(items: drawerItems).build(),
         ),
       ),
     );

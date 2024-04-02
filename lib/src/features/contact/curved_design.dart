@@ -54,7 +54,7 @@ class _ContactNavigationState extends State<ContactNavigation> {
                 PhoneCallTap(),
               ],
             ),
-            const SizedBox(height: 20), // Espacio entre contenido y la imagen
+            const SizedBox(height: 20),
             Image.network(
               imageUrls[4],
               fit: BoxFit.cover,

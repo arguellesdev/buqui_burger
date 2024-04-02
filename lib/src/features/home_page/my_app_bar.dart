@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../assets/constants.dart';
 import '../../common_widgets/container_theme.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -10,8 +11,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      foregroundColor: Colors.black54,
-      backgroundColor: Colors.white,
+      foregroundColor: foregroundC1,
+      backgroundColor: backgroundC1,
       elevation: 0,
       flexibleSpace: const ContainerTheme(),
       iconTheme: const IconThemeData(

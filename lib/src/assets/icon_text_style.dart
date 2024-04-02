@@ -15,7 +15,7 @@ class IconTextStyle extends StatelessWidget {
           color: iColor1,
           fontSize: 14,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Spot Mono'),
+          fontFamily: 'Skia'),
     );
   }
 }
