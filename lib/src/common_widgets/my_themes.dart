@@ -11,7 +11,7 @@ class MyTextStyle {
 }
 
 final commonButtonStyle = ElevatedButton.styleFrom(
-  backgroundColor: iColor2,
+  backgroundColor: baseColor1,
   foregroundColor: foregroundC1,
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(12),

@@ -1,4 +1,3 @@
-import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:buqui_burgers/src/common_widgets/hp_menu_drawer.dart';
 import 'package:buqui_burgers/src/features/home_page/buqui_page.dart';
 import 'package:buqui_burgers/src/features/home_page/home_buttons.dart';
@@ -16,7 +15,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundC1,
+      // backgroundColor: backgroundC1,
       appBar: const MyAppBar(),
       drawer: MyDrawer(
         drawerItems: [

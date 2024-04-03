@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:flutter/material.dart';
 
 class DrawerItem {
@@ -41,6 +42,8 @@ class MyDrawer extends StatelessWidget {
     return Semantics(
       label: semanticMessage,
       child: Drawer(
+        backgroundColor: baseColor1.withOpacity(0.90),
+        shadowColor: backgroundC2,
         child: SafeArea(
           child: DrawerBuilder(items: drawerItems).build(),
         ),

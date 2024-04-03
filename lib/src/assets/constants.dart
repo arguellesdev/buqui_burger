@@ -8,6 +8,7 @@ const iColor2 = Color(0xFF00838F);
 const fontColor1 = Colors.black38;
 const fontColor2 = Colors.black45;
 const fontColor3 = Colors.white70;
+const fontColor4 = Colors.white;
 
 //UI
 const foregroundC1 = Colors.black54;

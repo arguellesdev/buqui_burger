@@ -11,7 +11,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      foregroundColor: foregroundC1,
       backgroundColor: backgroundC1,
       elevation: 0,
       flexibleSpace: const ContainerTheme(),
