@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:flutter/material.dart';
 
 class DrawerItem {
@@ -32,14 +33,19 @@ class DrawerBuilder {
 
 class MyDrawer extends StatelessWidget {
   final List<DrawerItem> drawerItems;
-
-  const MyDrawer({super.key, required this.drawerItems});
+  final String semanticMessage;
+  const MyDrawer(
+      {super.key, required this.drawerItems, required this.semanticMessage});
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: SafeArea(
-        child: DrawerBuilder(items: drawerItems).build(
+    return Semantics(
+      label: semanticMessage,
+      child: Drawer(
+        backgroundColor: baseColor1.withOpacity(0.90),
+        shadowColor: backgroundC2,
+        child: SafeArea(
+          child: DrawerBuilder(items: drawerItems).build(),
         ),
       ),
     );

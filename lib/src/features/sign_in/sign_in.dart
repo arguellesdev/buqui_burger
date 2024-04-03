@@ -1,14 +1,18 @@
-import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
+import 'package:buqui_burgers/src/assets/constants.dart';
+import 'package:buqui_burgers/src/assets/space_sized_box.dart';
+import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
 
-class SignInForm extends StatefulWidget {
-  const SignInForm({super.key});
+import '../../assets/text_forms_assets.dart';
+
+class LogInForm extends StatefulWidget {
+  const LogInForm({super.key});
 
   @override
-  State<SignInForm> createState() => _SignInState();
+  State<LogInForm> createState() => _LogInState();
 }
 
-class _SignInState extends State<SignInForm> {
+class _LogInState extends State<LogInForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
 
@@ -30,42 +34,10 @@ class _SignInState extends State<SignInForm> {
               key: _formKey,
               child: Column(
                 children: [
-                  // Name input field
-                  TextFormField(
-                    controller: _nameController,
-                    decoration: const InputDecoration(
-                      hintText: 'Enter your username', // Placeholder text
-                    ),
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your username';
-                      }
-                      return null; // No validation error
-                    },
+                  const MyVerticalSpaceBox(
+                    height: 100,
                   ),
-                  const SizedBox(height: 16.0), // Add spacing between fields
-                  // Password input field
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: 'Enter your password', // Placeholder text
-                    ),
-                    obscureText: true,
-                    keyboardType: TextInputType.text,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
-                      }
-                      if (value.length < 8) {
-                        return 'Password must be at least 8 characters long';
-                      }
-                      final hasUppercase = value.contains(RegExp(r'[A-Z]'));
-                      if (!hasUppercase) {
-                        return 'Password needs to contain at least one uppercase letter';
-                      }
-                      return null;
-                    },
-                  ),
+                  const LogInFields(),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 22.0),
                     child: ElevatedButton(
@@ -75,7 +47,7 @@ class _SignInState extends State<SignInForm> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text('Hola, $name!'),
-                              backgroundColor: const Color(0xFFFF774C),
+                              backgroundColor: baseColor2,
                               duration: const Duration(seconds: 2),
                               elevation: 6.0,
                               shape: RoundedRectangleBorder(

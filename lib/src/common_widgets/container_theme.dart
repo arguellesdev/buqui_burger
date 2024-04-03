@@ -1,8 +1,10 @@
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:flutter/material.dart';
 
 class ContainerTheme extends StatefulWidget {
-  const ContainerTheme(
-      {super.key,});
+  const ContainerTheme({
+    super.key,
+  });
 
   @override
   State<ContainerTheme> createState() => _ContainerThemeState();
@@ -20,9 +22,9 @@ class _ContainerThemeState extends State<ContainerTheme> {
             bottomLeft: Radius.circular(19),
           ),
           gradient: LinearGradient(
-        colors: [Color(0xFFF9881F), Color(0xFFFF774C)],
-        stops: [0.2, 0.6],
-      )),
+            colors: [baseColor1, baseColor2],
+            stops: [0.2, 0.6],
+          )),
     );
   }
 }

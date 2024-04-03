@@ -32,5 +32,27 @@ const imageUrls = [
   'https://static.wixstatic.com/media/1c6db2_52e83a98887d4e6db1a887fd861b6a9f~mv2.jpg/v1/fit/w_2500,h_1330,al_c/1c6db2_52e83a98887d4e6db1a887fd861b6a9f~mv2.jpg',
   'https://mouthbysouthwest.com/wp-content/uploads/2023/07/BuquiBichi071723.jpg',
   'https://lumari.mx/wp-content/uploads/2019/07/BBN_08.jpg',
-  'https://media-cdn.tripadvisor.com/media/photo-s/10/0b/62/d3/buqui-bichi-en-todas.jpg'
+  'https://media-cdn.tripadvisor.com/media/photo-s/10/0b/62/d3/buqui-bichi-en-todas.jpg',
+  'https://static.wixstatic.com/media/3efee9_d3d16f0e618040af97b0ad01abcd03b3~mv2.png/v1/fill/w_1184,h_360,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/cervezas_pngs.png'
+];
+
+const taproomImages = [
+  {
+    "id": 't1',
+    "taproomImage": "https://lumari.mx/wp-content/uploads/2019/07/BBN_08.jpg"
+  },
+  {
+    "id": 't2',
+    "taproomImage": "https://lumari.mx/wp-content/uploads/2019/07/BBN_14.jpg"
+  },
+  {
+    "id": 't3',
+    "taproomImage":
+        "https://media1.phoenixnewtimes.com/phx/imager/u/original/16147211/buqui-bichi-brewing.jpg"
+  },
+  {
+    "id": "t4",
+    "taproomImage":
+        "https://gourmetdemexico.com.mx/wp-content/uploads/2018/04/cerveceri%CC%81as-sonora.jpg",
+  },
 ];

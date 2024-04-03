@@ -1,6 +1,7 @@
 import 'dart:async';
+import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
+import 'package:buqui_burgers/src/mocks/food_mocks.dart';
 
 class MyTapRoomScreen extends StatefulWidget {
   const MyTapRoomScreen({super.key});
@@ -11,16 +12,19 @@ class MyTapRoomScreen extends StatefulWidget {
 
 class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
   int _imageIndex = 0;
-  final List<String> _animatedImageUrls = [
-    'https://lumari.mx/wp-content/uploads/2019/07/BBN_08.jpg',
-    'https://lumari.mx/wp-content/uploads/2019/07/BBN_14.jpg',
-    'https://gourmetdemexico.com.mx/wp-content/uploads/2018/04/cerveceri%CC%81as-sonora.jpg',
-  ];
+  late Timer _timer;
+  final List<Map<String, String>> _animatedImageUrls = taproomImages;
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
 
   @override
   void initState() {
     super.initState();
-    Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 2), (Timer timer) {
       setState(() {
         _imageIndex = (_imageIndex + 1) % _animatedImageUrls.length;
       });
@@ -42,11 +46,7 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          flexibleSpace: const ContainerTheme(),
-          title: const Text('Tap Rooms'),
-        ),
+        appBar: const MyAppBar(),
         body: Center(
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 541),
@@ -54,10 +54,13 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
             switchInCurve: Curves.easeInOut,
             switchOutCurve: Curves.easeInOut,
             transitionBuilder: _buildTransition,
-            child: Image.network(
-              _animatedImageUrls[_imageIndex],
-              key: ValueKey<int>(_imageIndex),
-            ),
+            child: _animatedImageUrls.isNotEmpty &&
+                    _animatedImageUrls[_imageIndex]["taproomImage"] != null
+                ? Image.network(
+                    _animatedImageUrls[_imageIndex]["taproomImage"]!,
+                    key: ValueKey<int>(_imageIndex),
+                  )
+                : const SizedBox(),
           ),
         ),
       ),
