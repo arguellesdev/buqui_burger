@@ -14,11 +14,19 @@ class AboutUs extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 20),
         child: Column(
           children: [
-            const MyAppBar(),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    const Text(
+                      'Who the Buquis are\n(About us)',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: fontColor2,
+                        fontSize: 22,
+                        fontFamily: 'Futura',
+                      ),
+                    ),
                     Image.network(
                       'https://static.wixstatic.com/media/1c6db2_81c48fed10fb49e4b91c48c1a5a668cb~mv2.jpg/v1/fill/w_640,h_232,al_t,q_80,usm_0.66_1.00_0.01,enc_auto/1c6db2_81c48fed10fb49e4b91c48c1a5a668cb~mv2.jpg',
                     ),
