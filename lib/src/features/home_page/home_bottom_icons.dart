@@ -23,7 +23,7 @@ class CustomBuquiButton extends StatelessWidget {
       onPressed: onPressed,
       icon: Icon(
         icon,
-        color: foregroundC2,
+        color: foregroundC1,
       ),
       label: Text(
         label,
@@ -31,7 +31,7 @@ class CustomBuquiButton extends StatelessWidget {
           fontFamily: 'Futura',
           fontWeight: FontWeight.bold,
           fontSize: textScaleFactor.scale(12),
-          color: fontColor4,
+          color: fontColor1,
         ),
       ),
     );
