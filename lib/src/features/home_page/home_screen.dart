@@ -33,7 +33,6 @@ class MyHomePage extends StatelessWidget {
           ),
           DrawerItem(title: 'Log In', onTap: _goToLogIn)
         ],
-        semanticMessage: 'Discover us',
       ),
       body: const Padding(
         padding: EdgeInsets.only(right: 22, left: 22),

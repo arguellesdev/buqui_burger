@@ -15,13 +15,15 @@ class DrawerBuilder {
 
   Widget build() {
     return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
         final item = items[index];
         return ListTile(
-          contentPadding: const EdgeInsets.only(top: 46),
+          contentPadding: const EdgeInsets.only(top: 55),
           title: Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 22),
             child: Text(item.title),
           ),
           onTap: item.onTap,
@@ -33,14 +35,15 @@ class DrawerBuilder {
 
 class MyDrawer extends StatelessWidget {
   final List<DrawerItem> drawerItems;
-  final String semanticMessage;
+  final double drawerWidth;
+
   const MyDrawer(
-      {super.key, required this.drawerItems, required this.semanticMessage});
+      {super.key, required this.drawerItems, this.drawerWidth = 180});
 
   @override
   Widget build(BuildContext context) {
-    return Semantics(
-      label: semanticMessage,
+    return SizedBox(
+      width: drawerWidth,
       child: Drawer(
         backgroundColor: baseColor1.withOpacity(0.90),
         shadowColor: backgroundC2,
