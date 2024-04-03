@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       flexibleSpace: const ContainerTheme(),
       iconTheme: const IconThemeData(
-        color: fontColor1,
+        color: fontColor3,
       ),
       title: const Center(
         child: Text(

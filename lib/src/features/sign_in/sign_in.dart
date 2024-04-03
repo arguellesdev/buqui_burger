@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:buqui_burgers/src/assets/space_sized_box.dart';
 import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ class _LogInState extends State<LogInForm> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text('Hola, $name!'),
-                              backgroundColor: const Color(0xFFFF774C),
+                              backgroundColor: baseColor2,
                               duration: const Duration(seconds: 2),
                               elevation: 6.0,
                               shape: RoundedRectangleBorder(

@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:buqui_burgers/src/assets/space_sized_box.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class _LogInFieldsState extends State<LogInFields> {
       children: [
         Container(
           decoration: const BoxDecoration(
-            color: Color(0xFFF9881F),
+            color: baseColor1,
             borderRadius: BorderRadius.all(Radius.circular(88.0)),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -55,7 +56,7 @@ class _LogInFieldsState extends State<LogInFields> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(88.0)),
-            color: Color(0xFFF9881F),
+            color: baseColor1,
           ),
           child: TextFormField(
             decoration: const InputDecoration(

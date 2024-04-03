@@ -1,3 +1,4 @@
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -8,20 +9,20 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFFF7F7FB),
+        backgroundColor: backgroundC1,
         body: Padding(
           padding: const EdgeInsets.only(top: 20, right: 21, left: 21),
           child: Stack(
             children: [
               Scaffold(
                 appBar: AppBar(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.white60,
+                  backgroundColor: backgroundC2,
+                  foregroundColor: foregroundC1,
                   title: const Text(
                     textAlign: TextAlign.center,
                     'Who the buquis are\n (About us)',
                     style: TextStyle(
-                      color: Colors.white60,
+                      color: foregroundC1,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:buqui_burgers/src/assets/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 import 'package:buqui_burgers/src/mocks/food_mocks.dart';
@@ -47,7 +48,7 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: backgroundC1,
           flexibleSpace: const ContainerTheme(),
           title: const Text('Tap Rooms'),
         ),

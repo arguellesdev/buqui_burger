@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../assets/constants.dart';
 import '../../routes/b_routes.dart';
 
 class HomeFloatingButton extends StatelessWidget {
@@ -9,7 +10,7 @@ class HomeFloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton.small(
       backgroundColor: Colors.cyan.withOpacity(.64),
-      foregroundColor: Colors.white,
+      foregroundColor: foregroundC2,
       splashColor: Colors.orangeAccent.withOpacity(0.80),
       shape: const CircleBorder(),
       elevation: 2,

@@ -110,7 +110,7 @@ class _MyMenuState extends State<MyMenu> {
                                     'Swipe',
                                     style: TextStyle(
                                       fontSize: 16,
-                                      color: Colors.brown,
+                                      color: fontColor1,
                                       fontFamily: 'Futura',
                                     ),
                                   ),

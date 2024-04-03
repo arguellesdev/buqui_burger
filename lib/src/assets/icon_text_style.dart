@@ -12,7 +12,7 @@ class IconTextStyle extends StatelessWidget {
     return Text(
       text,
       style: const TextStyle(
-          color: iColor1,
+          color: fontColor3,
           fontSize: 14,
           fontWeight: FontWeight.bold,
           fontFamily: 'Skia'),

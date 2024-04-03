@@ -23,14 +23,25 @@ class _ContactNavigationState extends State<ContactNavigation> {
     });
   }
 
+  Widget _buildContactWidget() {
+    return Container(
+      height: 200.0,
+      alignment: Alignment.center,
+      child: _selectedIndex == 0 ? const LocationTap() : const CallTap(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: const ContainerTheme(),
-        title: const Text('Contact us'),
+        title: const Text(
+          'Contact us',
+        ),
         titleSpacing: 1.2,
         titleTextStyle: const TextStyle(
+            color: fontColor1,
             fontSize: 22,
             fontWeight: FontWeight.bold,
             overflow: TextOverflow.fade),
@@ -46,12 +57,7 @@ class _ContactNavigationState extends State<ContactNavigation> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-                height: 200.0,
-                alignment: Alignment.center,
-                child: _selectedIndex == 0
-                    ? const LocationTap()
-                    : const PhoneCallTap()),
+            _buildContactWidget(),
             Image.network(
               imageUrls[4],
               fit: BoxFit.cover,
