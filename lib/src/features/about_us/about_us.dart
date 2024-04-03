@@ -42,7 +42,7 @@ class AboutUs extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.black38,
                               fontSize: 14,
-                              fontFamily: 'Kosugi Maru'),
+                              fontFamily: 'Futura'),
                         ),
                       ),
                     ],

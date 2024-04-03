@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../assets/icon_text_style.dart';
 import '../../assets/space_sized_box.dart';
 import '../../common_widgets/my_launch_urls_method.dart';
