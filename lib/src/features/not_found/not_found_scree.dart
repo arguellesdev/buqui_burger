@@ -1,4 +1,4 @@
-import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
+import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import 'package:buqui_burgers/src/features/not_found/empty_placeholder_widget.dart';
 import 'package:buqui_burgers/src/localization/string_hardcoded.dart';
 import 'package:flutter/material.dart';

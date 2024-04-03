@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../assets/constants.dart';
-import '../../common_widgets/container_theme.dart';
+import '../assets/constants.dart';
+import 'container_theme.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({super.key});
@@ -16,13 +16,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       flexibleSpace: const ContainerTheme(),
       iconTheme: const IconThemeData(
-        color: Colors.black38,
+        color: fontColor1,
       ),
       title: const Center(
         child: Text(
           'Buqui Burgers',
           style: TextStyle(
-            color: Colors.black54,
+            color: fontColor2,
             fontWeight: FontWeight.bold,
             wordSpacing: 9,
             letterSpacing: 2,

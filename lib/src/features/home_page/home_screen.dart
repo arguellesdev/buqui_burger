@@ -3,7 +3,7 @@ import 'package:buqui_burgers/src/common_widgets/hp_menu_drawer.dart';
 import 'package:buqui_burgers/src/features/home_page/buqui_page.dart';
 import 'package:buqui_burgers/src/features/home_page/home_buttons.dart';
 import 'package:buqui_burgers/src/routes/b_routes.dart';
-import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
+import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import "package:flutter/material.dart";
 import 'floating_home_button.dart';
 import 'my_search_bar.dart';

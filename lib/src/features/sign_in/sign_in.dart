@@ -1,5 +1,5 @@
 import 'package:buqui_burgers/src/assets/space_sized_box.dart';
-import 'package:buqui_burgers/src/features/home_page/my_app_bar.dart';
+import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../assets/text_forms_assets.dart';
