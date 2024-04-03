@@ -1,7 +1,6 @@
 import 'dart:async';
-import 'package:buqui_burgers/src/assets/constants.dart';
+import 'package:buqui_burgers/src/common_widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 import 'package:buqui_burgers/src/mocks/food_mocks.dart';
 
 class MyTapRoomScreen extends StatefulWidget {
@@ -47,11 +46,7 @@ class _MyTapRoomScreenState extends State<MyTapRoomScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: backgroundC1,
-          flexibleSpace: const ContainerTheme(),
-          title: const Text('Tap Rooms'),
-        ),
+        appBar: const MyAppBar(),
         body: Center(
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 541),

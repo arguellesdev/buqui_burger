@@ -3,7 +3,9 @@ import '../assets/constants.dart';
 import 'container_theme.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({super.key});
+  final Widget? leading;
+
+  const MyAppBar({super.key, this.leading});
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -17,6 +19,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: const IconThemeData(
         color: fontColor3,
       ),
+      leading: leading,
       title: const Center(
         child: Text(
           'Buqui Burgers',

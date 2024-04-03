@@ -1,7 +1,7 @@
-import 'package:buqui_burgers/src/common_widgets/container_theme.dart';
 import 'package:buqui_burgers/src/features/menu/add_remove_items.dart';
 import 'package:flutter/material.dart';
 import '../../assets/constants.dart';
+import '../../common_widgets/my_app_bar.dart';
 import '../products/menu_products/food.dart';
 import '../products/menu_products/food_provider.dart';
 
@@ -27,18 +27,7 @@ class _MyMenuState extends State<MyMenu> {
     return SafeArea(
       child: Scaffold(
           backgroundColor: const Color(0xFFF7F7FB),
-          appBar: AppBar(
-            flexibleSpace: const ContainerTheme(),
-            backgroundColor: backgroundC1,
-            foregroundColor: foregroundC2,
-            title: const Text('The Buqui Bichi Menu'),
-            titleSpacing: 1.2,
-            titleTextStyle: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                overflow: TextOverflow.fade,
-                color: fontColor1),
-          ),
+          appBar: const MyAppBar(),
           body: Padding(
             padding: const EdgeInsets.only(top: 20, right: 21, left: 21),
             child: Stack(

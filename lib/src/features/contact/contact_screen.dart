@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../assets/constants.dart';
-import '../../common_widgets/container_theme.dart';
+import '../../common_widgets/my_app_bar.dart';
 import '../../mocks/food_mocks.dart';
 import '../../routes/b_routes.dart';
 import 'contact_call.dart';
@@ -34,17 +34,7 @@ class _ContactNavigationState extends State<ContactNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: const ContainerTheme(),
-        title: const Text(
-          'Contact us',
-        ),
-        titleSpacing: 1.2,
-        titleTextStyle: const TextStyle(
-            color: fontColor1,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            overflow: TextOverflow.fade),
+      appBar: MyAppBar(
         leading: IconButton(
           onPressed: () => GoRouter.of(context).go('/'),
           icon: const Icon(Icons.home),
