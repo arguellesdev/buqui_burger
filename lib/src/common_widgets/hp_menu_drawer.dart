@@ -15,8 +15,8 @@ class DrawerBuilder {
 
   Widget build() {
     return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+      // shrinkWrap: true,
+      // physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
         final item = items[index];
@@ -24,7 +24,11 @@ class DrawerBuilder {
           contentPadding: const EdgeInsets.only(top: 55),
           title: Padding(
             padding: const EdgeInsets.only(left: 22),
-            child: Text(item.title),
+            child: Text(item.title,
+                style: const TextStyle(
+                    fontFamily: 'Futura',
+                    fontWeight: FontWeight.bold,
+                    color: fontColor1)),
           ),
           onTap: item.onTap,
         );
